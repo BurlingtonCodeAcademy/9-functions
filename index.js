@@ -6,7 +6,7 @@ function sayHello(name){
 
 let newGreeting = sayHello("John");
 
-console.log(newGreeting);
+// console.log(newGreeting);
 
 function shouter(someString){
     let theString = someString.toString();
@@ -15,35 +15,35 @@ function shouter(someString){
 }
 
 const goToBedLittleBaby = "go to sleep";
-console.log(shouter(goToBedLittleBaby));
+// console.log(shouter(goToBedLittleBaby));
 
 function add(x, y){
     return x + y;
 }
 
-console.log("Add Function", add(1, 2));
+// console.log("Add Function", add(1, 2));
 
 let subtract = function(x, y){
     return x - y;
 }
 
-console.log("Subtract Function", subtract(2, 1));
+// console.log("Subtract Function", subtract(2, 1));
 
 let multiply = function(x, y){
     return x * y;
 }
 
-console.log("Multiply Function", multiply(2, 3));
+// console.log("Multiply Function", multiply(2, 3));
 
 let divide = (theCarIsSoSlow, theMotorcycleIsVeryFast) => theCarIsSoSlow / theMotorcycleIsVeryFast;
 
 const x = 10;
 const y = 2;
 
-console.log("Divide Function", divide(x, y));
+// console.log("Divide Function", divide(x, y));
 
-console.log(x)
-console.log(y)
+// console.log(x)
+// console.log(y)
 
 function fizzBuzz(number){
     // some code
@@ -60,13 +60,13 @@ function fizzBuzz(number){
     }
 }
 
-fizzBuzz(15);
+// fizzBuzz(15);
 
 function fizzBuzzRecursive(num, maxNumber){
     if(num > maxNumber){
         return;
     }
-
+        
     if(num % 15 === 0){
         console.log("FizzBuzz");
     } else if (num % 3 === 0){
@@ -79,4 +79,21 @@ function fizzBuzzRecursive(num, maxNumber){
     fizzBuzzRecursive(num + 1, maxNumber);
 }
 
-fizzBuzzRecursive(1, 15);
+// fizzBuzzRecursive(1, 15);
+
+function toTitleCase(sentence){
+    // split into individual words
+    const words = sentence.toLowerCase().split(" ");
+
+    let titleCaseSentence = "";
+
+    for(let i = 0; i < words.length; i++){
+        let word = words[i]; // first word in the array
+        titleCaseSentence += word[0].toUpperCase() + word.slice(1) + " ";
+    }
+
+    return titleCaseSentence.trim(); // remove any trailing spaces
+}
+
+let result = toTitleCase("My name is Grammy and I got a really cool hammy.");
+console.log(result);
