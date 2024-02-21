@@ -96,4 +96,64 @@ function toTitleCase(sentence){
 }
 
 let result = toTitleCase("My name is Grammy and I got a really cool hammy.");
-console.log(result);
+// console.log(result);
+
+function greet(name){
+    return "Welcome to Disney World " + name;
+}
+
+// console.log(greet("Heidi"));
+
+function areaOfSquare(length, width){
+    let area = length * width;
+    return `The area of the square is ${area}`;
+    // return "The room is " + area + " square feet";
+}
+
+// console.log(areaOfSquare(14, 12))
+
+function gradeClassifier(score){
+    if (score < 0 || score > 100){
+        return "Invalid score";
+    }
+
+    if (typeof score!== "number"){
+        return "Invalid score";
+    }
+
+    switch(score > 0 && score <= 100){
+        case score >= 90:
+            return "A";
+        case score >= 80:
+            return "B";
+        case score >= 70:
+            return "C";
+        case score >= 60:
+            return "D";
+        default:
+            return "F";
+    }
+}
+
+// console.log(gradeClassifier("Miguel"));
+
+let someNumberSquared = (number) => number * number;
+
+// console.log(someNumberSquared(10));
+
+function convertMinutesToSeconds(minutes){
+    let secondsInAMinute = 60;
+    let result = minutes * secondsInAMinute;
+
+    return result;
+} 
+
+let lengthOfClass = 180;
+
+// console.log("Our class is this many seconds:", convertMinutesToSeconds(lengthOfClass));
+
+function squarePerimeter(sideLength){
+    return sideLength * 4;
+}
+
+console.log("The perimeter is: ", squarePerimeter(10));
